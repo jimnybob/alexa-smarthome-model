@@ -8,4 +8,7 @@ libraryDependencies ++= Seq(
   "com.typesafe.play"            %% "play-ws" % "2.5.10",
   "org.scalatest"                %% "scalatest" % "3.0.1" % Test
 )
-    
+
+libraryDependencies ~= { _ map {
+  case m => m.exclude("commons-logging", "commons-logging")
+}}

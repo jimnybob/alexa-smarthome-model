@@ -17,7 +17,7 @@ object DiscoveredAppliancesPayload {
   implicit val format = Json.format[DiscoveredAppliancesPayload]
 }
 
-case class ChangeAppliancePayload(switchControlAction: String, appliance: Appliance, accessToken: String)
+case class ChangeAppliancePayload(appliance: Appliance, accessToken: String)
 
 object ChangeAppliancePayload {
 
