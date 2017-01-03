@@ -1,5 +1,7 @@
 name := "alexa-smarthome-model"
 
+organization := "uk.co.smartii.alexa"
+
 version := "1.0.0-SNAPSHOT"
 
 scalaVersion := "2.11.8"
