@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jimnybob/alexa-smarthome-model.svg?branch=master)](https://travis-ci.org/jimnybob/alexa-smarthome-model)
+
 # alexa-smarthome-model
 There doesn't seem to be a Java model for "Smart Home" requests/responses.
 
