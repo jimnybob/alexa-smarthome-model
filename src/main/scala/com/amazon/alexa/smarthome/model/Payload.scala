@@ -2,6 +2,7 @@ package com.amazon.alexa.smarthome.model
 
 import play.api.libs.json.Json
 import ai.x.play.json.Jsonx
+import com.amazon.alexa.smarthome.EnumUtils
 
 /**
   * Created by jimbo on 02/01/17.
@@ -14,14 +15,14 @@ object AccessTokenPayload {
   implicit val format = Json.format[AccessTokenPayload]
 }
 
-case class EmptyPayload(dummyal: Option[String] = None) extends Payload
+case class EmptyPayload(dummyval: Option[String] = None) extends Payload
 
 object EmptyPayload {
 
   implicit val format = Json.format[EmptyPayload]
 }
 
-case class DiscoveredAppliance(actions: Seq[String],
+case class DiscoveredAppliance(actions: Seq[SmartHomeAction.Value],
                                additionalApplianceDetails: Map[String, String],
                                applianceId: String,
                                friendlyDescription: String,
@@ -33,6 +34,7 @@ case class DiscoveredAppliance(actions: Seq[String],
 
 object DiscoveredAppliance {
 
+  implicit val formatAction = EnumUtils.enumFormat(SmartHomeAction)
   implicit val format = Json.format[DiscoveredAppliance]
 }
 
