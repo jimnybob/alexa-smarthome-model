@@ -17,7 +17,7 @@ libraryDependencies ~= { _ map {
 }}
 
 publishTo := {
-  val nexus = "http://repo.smartii.co.uk:8081/nexus/content/repositories/"
+  val nexus = "http://repo.smartii.co.uk:8081/nexus/content/repositories"
   if (isSnapshot.value)
     Some("snapshots" at nexus + "/snapshots")
   else
